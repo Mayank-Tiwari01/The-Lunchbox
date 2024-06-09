@@ -1,0 +1,36 @@
+.res-card {
+  width: 300px; 
+  border: 1px solid #ddd; 
+  border-radius: 20px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px; 
+  background-color: #fff; 
+}
+.res-items {
+  padding: 15px; 
+  text-align: center; 
+}
+
+.res-image {
+  width: 100%; 
+  height: auto; 
+  display: block; /* Remove any bottom space */
+}
+
+h1 {
+  font-size: 1.5em; 
+  margin: 10px 0; 
+}
+
+p {
+  color: #555;
+  margin: 5px 0; 
+}
+
+.res-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+  gap: 10px; 
+  padding: 10px; 
+}
