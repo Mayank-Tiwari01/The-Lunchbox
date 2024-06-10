@@ -33,29 +33,6 @@ npm start
 
 This will start the development server and you can view the application by navigating to `http://localhost:1234` in your web browser.
 
-## Project Structure
-
-The project structure is organized as follows:
-
-```
-The-Lunchbox/
-├── public/
-│   ├── index.html
-│   └── ...
-├── src/
-│   ├── components/
-│   │   ├── Header.js
-│   │   └── Restaurant.js
-│   ├── styles/
-│   │   └── styles.css
-│   ├── App.js
-│   ├── index.js
-│   └── ...
-├── package.json
-└── README.md
-```
-(Will be updated with time)
-
 ### Components
 
 - **Header**: Contains the navigation bar with links to different sections of the application.
