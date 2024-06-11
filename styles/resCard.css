@@ -1,36 +1,87 @@
-.res-card {
-  width: 300px; 
-  border: 1px solid #ddd; 
-  border-radius: 20px; 
-  overflow: hidden; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px; 
-  background-color: #fff; 
-}
-.res-items {
-  padding: 15px; 
-  text-align: center; 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.res-image {
-  width: 100%; 
-  height: auto; 
-  display: block; /* Remove any bottom space */
-}
-
-h1 {
-  font-size: 1.5em; 
-  margin: 10px 0; 
-}
-
-p {
-  color: #555;
-  margin: 5px 0; 
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  background-color: #f5f5f5;
 }
 
 .res-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
-  gap: 10px; 
-  padding: 10px; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 30px;
+}
+
+.res-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.res-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.res-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.res-items {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+p {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.res-card--gradient {
+  background: linear-gradient(135deg, #ff7e7e, #ffa07a);
+  color: #fff;
+}
+
+.res-card--gradient h1 {
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.res-card--gradient p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.res-card--rounded {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.res-card--rounded .res-image {
+  border-radius: 50%;
+}
+.rating {
+  background-color: #4caf50; 
+  color: #ffffff; 
+  border-radius: 5px;
+  padding: 4px 8px; 
+  font-weight: 600; 
+  display: inline-block; 
+  line-height: 1; /* Adjust line-height for better vertical alignment */
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Restaurant = ({ name, rating, price, image }) => {
+const Restaurant = ({ name, rating, price, image, deliveryTime}) => {
   return (
     <div className="res-card">
       <div className="res-items">
@@ -10,8 +10,9 @@ const Restaurant = ({ name, rating, price, image }) => {
           alt={name}
         />
         <h1>{name}</h1>
-        <p>Rating: {rating}</p>
-        <p>Price: {price}</p>
+        <p ><span className='rating'>{rating}</span></p>
+        <p>{price}</p>
+        <p>{deliveryTime}</p>
       </div>
     </div>
   );

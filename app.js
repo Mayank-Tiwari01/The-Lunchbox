@@ -15,6 +15,7 @@ const App = () => {
             rating={res.rating} 
             price={"Starting from rupees " + res.price / 100} 
             image={res.image} 
+            deliveryTime={res.avgDeliveryTime}
           />
         ))}
       </div>
