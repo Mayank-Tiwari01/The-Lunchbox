@@ -85,3 +85,14 @@ p {
   display: inline-block; 
   line-height: 1; /* Adjust line-height for better vertical alignment */
 }
+.delivery-img {
+  width: 30px; 
+  height: 30px; 
+  margin-right: 8px;
+  vertical-align: middle; 
+  object-fit: contain;
+}
+.delivery-img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}

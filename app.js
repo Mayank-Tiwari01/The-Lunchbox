@@ -13,7 +13,7 @@ const App = () => {
             key={res.id} 
             name={res.name} 
             rating={res.rating} 
-            price={"Starting from rupees " + res.price / 100} 
+            price={res.price / 100} 
             image={res.image} 
             deliveryTime={res.avgDeliveryTime}
           />
