@@ -1,0 +1,290 @@
+[
+    {
+        "id": 1,
+        "name": "Dominos Pizza",
+        "rating": 4.5,
+        "price": "45000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/d0450ce1a6ba19ea60cd724471ed54a8",
+        "avgDeliveryTime": "30-35 mins"
+    },
+    {
+        "id": 2,
+        "name": "Chinese Food",
+        "rating": 4.2,
+        "price": "15000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/1eb780b85af2f938a43a7581927eca5f",
+        "avgDeliveryTime": "25-30 mins"
+    },
+    {
+        "id": 4,
+        "name": "Sundae Everyday Ice Creams",
+        "rating": 4.3,
+        "price": "20000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/d07479d8c5d2761d79b86a74c8cf3f1f",
+        "avgDeliveryTime": "20-25 mins"
+    },
+    {
+        "id": 5,
+        "name": "The Dessert Zone",
+        "rating": 4.6,
+        "price": "70000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/9a198a0f05552f735eccce54f426cbd4",
+        "avgDeliveryTime": "30-35 mins"
+    },
+    {
+        "id": 6,
+        "name": "Cake and Dessert",
+        "rating": 4.4,
+        "price": "90000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/5/29/214fc405-fa3e-46e4-8933-6551c4e2cbe6_794599.JPG",
+        "avgDeliveryTime": "35-40 mins"
+    },
+    {
+        "id": 7,
+        "name": "Burger Singh",
+        "rating": 4.5,
+        "price": "25000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/972a37599772cdc7df93a0855ad87591",
+        "avgDeliveryTime": "25-30 mins"
+    },
+    {
+        "id": 8,
+        "name": "Baskin Robbins",
+        "rating": 4.8,
+        "price": "60000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/81a8622d54d9226943f29899df0e3510",
+        "avgDeliveryTime": "20-25 mins"
+    },
+    {
+        "id": 9,
+        "name": "The Meal Time",
+        "rating": 4.4,
+        "price": "30000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/wcfvn9y1hjkizmuwlnfh",
+        "avgDeliveryTime": "25-30 mins"
+    },
+    {
+        "id": 10,
+        "name": "The South Indian Dhaba",
+        "rating": 4.6,
+        "price": "35000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ivantwqzrzdsrbzpexmi",
+        "avgDeliveryTime": "20-25 mins"
+    },
+    {
+        "id": 11,
+        "name": "Subway",
+        "rating": 4.3,
+        "price": "40000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/4/793025c0-291a-4ac8-8fce-f35d77bff979_79573.JPG",
+        "avgDeliveryTime": "20-25 mins"
+    },
+    {
+        "id": 12,
+        "name": "The Hocco Kitchen",
+        "rating": 4.7,
+        "price": "50000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/8d8e0af99cbe68fe436f8a764aec7052",
+        "avgDeliveryTime": "30-35 mins"
+    },
+    {
+        "id": 13,
+        "name": "KFC",
+        "rating": 4.5,
+        "price": "45000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/34bdc0b9-123a-44a8-b07a-12055c8ba41f_76627.JPG",
+        "avgDeliveryTime": "25-30 mins"
+    },
+    {
+        "id": 3,
+        "name": "Royal Punjabi",
+        "rating": 4.7,
+        "price": "55000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/grexkx7sglrjaniczm1o",
+        "avgDeliveryTime": "35-40 mins"
+    },
+    {
+        "id": 14,
+        "name": "Burger King",
+        "rating": 4.5,
+        "price": "30000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/11/4ee8bc77-ca9f-41bd-a0f3-511c70902b91_78036.JPG",
+        "avgDeliveryTime": "25-30 mins"
+    },
+    {
+        "id": 15,
+        "name": "La pino'z pizza",
+        "rating": 4.3,
+        "price": "28000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/skomdrspgayub1ufx0iw",
+        "avgDeliveryTime": "30-35 mins"
+    },
+    {
+        "id": 16,
+        "name": "Louis Burger",
+        "rating": 4.7,
+        "price": "32000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/19d3d352cc815b9d88b22617b41fa97b",
+        "avgDeliveryTime": "20-25 mins"
+    },
+    {
+        "id": 17,
+        "name": "Maiz Mexican Kitchen",
+        "rating": 4.6,
+        "price": "34000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/19d3d352cc815b9d88b22617b41fa97b",
+        "avgDeliveryTime": "25-30 mins"
+    },
+    {
+        "id": 18,
+        "name": "Nothing But Chicken",
+        "rating": 4.4,
+        "price": "36000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/244f79d580c6aa60705a72f1a1293fd5",
+        "avgDeliveryTime": "30-35 mins"
+    },
+    {
+        "id": 19,
+        "name": "Salad Days",
+        "rating": 4.2,
+        "price": "15000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/3a6b427c050f6a0ca7c12fea2d6aa383",
+        "avgDeliveryTime": "25-30 mins"
+    },
+    {
+        "id": 20,
+        "name": "Sahara Restaurant",
+        "rating": 4.5,
+        "price": "25000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/rq0fj9gdppg9hu7g6aea",
+        "avgDeliveryTime": "20-25 mins"
+    },
+    {
+        "id": 21,
+        "name": "Mayank's Zaika",
+        "rating": 4.7,
+        "price": "27000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/vc1opzfwu6w9oyaqsy0w",
+        "avgDeliveryTime": "30-35 mins"
+    },
+    {
+        "id": 22,
+        "name": "Rohit Sharma's Fav Burgers",
+        "rating": 4.6,
+        "price": "29000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/9e9bd2c9ca7be7c08e88ccf1eeccfb1e",
+        "avgDeliveryTime": "35-40 mins"
+    },
+    {
+        "id": 23,
+        "name": "Momos by Motu Patlu",
+        "rating": 4.3,
+        "price": "17000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/socnebubliehguk0ed1s",
+        "avgDeliveryTime": "20-25 mins"
+    },
+    {
+        "id": 24,
+        "name": "Biryani World",
+        "rating": 4.8,
+        "price": "35000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/3119220ebb79daca5313f41c2e618416",
+        "avgDeliveryTime": "25-30 mins"
+    },
+    {
+        "id": 25,
+        "name": "Third Wave Coffee",
+        "rating": 4.7,
+        "price": "24000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/d96267738c19ec62acb5390e52faba41",
+        "avgDeliveryTime": "30-35 mins"
+    },
+    {
+        "id": 26,
+        "name": "Social",
+        "rating": 4.4,
+        "price": "20000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/do5avei4bhgtgqbc8ooe",
+        "avgDeliveryTime": "20-25 mins"
+    },
+    {
+        "id": 27,
+        "name": "Mk Spice",
+        "rating": 4.5,
+        "price": "31000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ucou6sfwmgzdhywgs7dr",
+        "avgDeliveryTime": "25-30 mins"
+    },
+    {
+        "id": 28,
+        "name": "South Magic",
+        "rating": 4.2,
+        "price": "18000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/vtldkqrbuga3phdpsodk",
+        "avgDeliveryTime": "30-35 mins"
+    },
+    {
+        "id": 29,
+        "name": "Hungry Buddha",
+        "rating": 4.6,
+        "price": "27000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/f85131e53f7b75cc6a3e2bedd5112306",
+        "avgDeliveryTime": "35-40 mins"
+    },
+    {
+        "id": 30,
+        "name": "Tiwari's Cafe",
+        "rating": 4.7,
+        "price": "22000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/dade933dfa581ceb550fcb68b186cc35",
+        "avgDeliveryTime": "25-30 mins"
+    },
+    {
+        "id": 31,
+        "name": "Mayank's Pasta",
+        "rating": 4.3,
+        "price": "26000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ouogfzqbajml11yjnnid",
+        "avgDeliveryTime": "30-35 mins"
+    },
+    {
+        "id": 32,
+        "name": "Bhole Nath Paav Bhaji",
+        "rating": 4.5,
+        "price": "21000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/kltj8pjnwbmckoc6cuem",
+        "avgDeliveryTime": "20-25 mins"
+    },
+    {
+        "id": 33,
+        "name": "The Elite Hub",
+        "rating": 4.8,
+        "price": "34000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/97ec878bb683bcbbe6c2cd5d042b0101",
+        "avgDeliveryTime": "35-40 mins"
+    },
+    {
+        "id": 34,
+        "name": "Veggie Station",
+        "rating": 4.4,
+        "price": "19000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/jvo8nyd40qkuykdwsx3s",
+        "avgDeliveryTime": "25-30 mins"
+    },
+    {
+        "id": 35,
+        "name": "Rainbow Juice Centre",
+        "rating": 4.7,
+        "price": "12000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/gnsf7leakszgi84bqqkv",
+        "avgDeliveryTime": "20-25 mins"
+    },
+    {
+        "id": 36,
+        "name": "The Cake's Nest",
+        "rating": 4.6,
+        "price": "28000",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/qgiujwticki2szdepwrz",
+        "avgDeliveryTime": "30-35 mins"
+    }
+]
