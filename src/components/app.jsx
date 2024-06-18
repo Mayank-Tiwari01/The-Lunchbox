@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Restaurant from './Restaurant';
 import TopRatedButton from './TopRatedButton';
+import ShimmerUi from './ShimmerUi'; 
 import localRestaurants from '../../data/data.json';
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
   async function fetchData() {
     try {
       const response = await fetch("https://mocki.io/v1/4f61ea24-8625-496b-9518-57ae2a21def9");
-      
+
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -27,7 +28,8 @@ const App = () => {
     fetchData();
   }, []);
 
-  return (
+  //if the array is empty load the shimmer ui
+  return (filteredRestaurants.length === 0) ? <ShimmerUi /> : (
     <>
       <Header />
       <TopRatedButton

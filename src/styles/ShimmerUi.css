@@ -1,0 +1,44 @@
+.shimmer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 30px;
+}
+
+.shimmer-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.shimmer-image {
+  width: 100%;
+  height: 200px;
+  background: #e0e0e0;
+  animation: shimmer 1.5s infinite;
+}
+
+.shimmer-line {
+  width: 100%;
+  height: 20px;
+  background: #e0e0e0;
+  margin: 10px 0;
+  animation: shimmer 1.5s infinite;
+}
+
+.shimmer-title {
+  height: 30px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -450px 0;
+  }
+  100% {
+    background-position: 450px 0;
+  }
+}
