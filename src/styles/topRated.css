@@ -1,0 +1,49 @@
+.top-rated-button {
+  background-color: #4fba22; 
+  color: #fff;
+  border: none; 
+  border-radius: 25px; 
+  padding: 12px 24px; 
+  font-size: 1rem; 
+  font-weight: 600; 
+  cursor: pointer; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  position: relative; 
+  overflow: hidden; /* Hide overflow for pseudo-element */
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.top-rated-button::before {
+  content: ''; /* Empty content for pseudo-element */
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Start at the top */
+  left: 50%; 
+  width: 200%; 
+  height: 200%; 
+  background: rgba(255, 255, 255, 0.2); 
+  transition: all 0.5s ease; 
+  transform: translateX(-50%) translateY(-100%) rotate(45deg); /* Start off screen */
+  z-index: 0; /* Behind button text */
+}
+
+.top-rated-button:hover::before {
+  transform: translateX(-50%) translateY(0) rotate(45deg); /* Move on screen */
+}
+
+.top-rated-button:hover {
+  background-color: #ff4e4e; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.top-rated-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 126, 126, 0.5); 
+}
+
+.top-rated-button:active {
+  transform: translateY(2px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Restore shadow on click */
+}
