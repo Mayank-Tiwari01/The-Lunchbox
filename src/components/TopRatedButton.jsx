@@ -1,9 +1,11 @@
 import React from 'react';
-import "../styles/topRated.css"
-const TopRatedButton = ({ restaurants, setFilteredRestaurants }) => {
+import "../styles/topRated.css";
+
+const TopRatedButton = ({ restaurants, setFilteredRestaurants, setDisplayRestaurants }) => {
   const handleClick = () => {
     const filteredList = restaurants.filter((item) => item.rating > 4.5);
     setFilteredRestaurants(filteredList);
+    setDisplayRestaurants(filteredList);
   };
 
   return (

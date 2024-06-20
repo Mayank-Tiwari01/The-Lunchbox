@@ -12,16 +12,26 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px 30px;
   background-color: #8ddc86;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  z-index: 1;
+  z-index: 10;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-bar:hover {
+  background-color: #7dc379;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .left-logo .img-file {
-  height: 80px;
-  
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.left-logo .img-file:hover {
+  transform: scale(1.1);
 }
 
 .right-options-ul {
@@ -36,27 +46,29 @@ body {
   font-size: 16px;
   font-weight: 500;
   color: #333;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   position: relative;
 }
 
 .right-options-ul li:hover {
   color: #1e5128;
+  transform: translateY(-2px);
 }
 
 .right-options-ul li::before {
   content: '';
   position: absolute;
   bottom: -5px;
-  left: 0;
+  left: 50%;
   width: 0;
   height: 2px;
   background-color: #1e5128;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease, left 0.3s ease;
 }
 
 .right-options-ul li:hover::before {
   width: 100%;
+  left: 0;
 }
 
 @media (max-width: 768px) {
@@ -67,8 +79,13 @@ body {
   }
 
   .right-options-ul {
-    margin-top: 20px;
+    margin-top: 15px;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
+  }
+
+  .right-options-ul li {
+    margin-left: 0;
+    margin-right: 20px;
   }
 }
