@@ -18,8 +18,12 @@ const Header = () => {
             <li>
               <Link to="/" className="nav-link">Home</Link>
             </li>
-            <li>Pure Veg food options</li>
-            <li>Non Veg food options</li>
+            <li>
+              <Link to="/PureVeg" className="nav-link">Pure Veg</Link>
+            </li>
+            <li>
+              <Link to="/NonVeg" className="nav-link">Non-Veg</Link>
+            </li>
             <li>
               <Link to="/About" className="nav-link">About Us</Link>
             </li>

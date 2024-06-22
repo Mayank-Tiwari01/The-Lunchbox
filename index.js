@@ -6,6 +6,8 @@ import About from './src/components/About';
 import Contact from './src/components/Contact';
 import Error from './src/components/Error';
 import Body from './src/components/Body';
+import NonVeg from './src/components/NonVeg';
+import PureVeg from './src/components/PureVeg';
 const reactRoute = createBrowserRouter([
   {
     path : '/',
@@ -22,6 +24,14 @@ const reactRoute = createBrowserRouter([
       {
         path : '/Contact-Us',
         element : <Contact/>
+      },
+      {
+        path : '/NonVeg',
+        element : <NonVeg/>
+      },
+      {
+        path : '/PureVeg',
+        element : <PureVeg/>
       }
     ],
     errorElement : <Error/>
