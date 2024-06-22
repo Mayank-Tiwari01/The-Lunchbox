@@ -1,0 +1,146 @@
+.about-container {
+  padding: 60px 40px;
+  background-color: #f0f7f0;
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+}
+
+.about-intro, .about-mission, .about-team, .about-testimonials {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.about-intro h1, .about-mission h2, .about-team h2, .about-testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #2ecc71;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-intro h1::after, .about-mission h2::after, .about-team h2::after, .about-testimonials h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #2ecc71, transparent);
+}
+
+.about-intro p, .about-mission p, .profile-card p, .testimonial-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #34495e;
+}
+
+.team-profiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.profile-card {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(46, 204, 113, 0.1);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(46, 204, 113, 0.2);
+}
+
+.profile-card-image {
+  width: 70%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.profile-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.profile-card:hover img {
+  transform: scale(1.1);
+}
+
+.profile-card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center; /* Center the text inside the card */
+  width: 100%; /* Ensure the padding applies correctly */
+}
+
+.profile-card h3 {
+  font-size: 1.6rem;
+  margin: 0 0 10px;
+  color: #2ecc71;
+}
+
+.profile-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000c06;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(46, 204, 113, 0.1);
+  overflow: hidden;
+  padding: 40px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 320px;
+  text-align: left;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 4rem;
+  color: #2ecc71;
+  opacity: 0.2;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(46, 204, 113, 0.2);
+}
+
+.testimonial-card h4 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #2ecc71;
+  font-weight: 600;
+}
