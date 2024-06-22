@@ -89,3 +89,17 @@ body {
     margin-right: 20px;
   }
 }
+
+.nav-link {
+  text-decoration: none;
+  color: inherit; /* This will make the link color match the parent text color */
+}
+
+.nav-link:hover {
+  text-decoration: none;
+}
+
+/*to remove the blue color from visited links as well */
+.nav-link:visited {
+  color: inherit;
+}

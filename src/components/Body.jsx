@@ -7,7 +7,7 @@ import localRestaurants from '../../data/data.json';
 import NoResults from './NoResult'; 
 import SearchBar from './SearchBar';
 import '../styles/filterArea.css'
-const App = () => {
+const Body = () => {
   //used for filtering top restaurant.
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   //used to store and update the searched restaurant.
@@ -47,42 +47,41 @@ const App = () => {
 
   return (filteredRestaurants.length === 0) ? <ShimmerUi /> : (
     <>
-      <Header />
-        <div className='filter-area'>
-          <SearchBar
-          searchText={searchText}
-          setSearchText={setSearchText}
-          searchRestaurant={searchRestaurant}
-          setSearchRestaurant={setSearchRestaurant}
-          filteredRestaurants={filteredRestaurants}
-          setDisplayRestaurants={setDisplayRestaurants}
-          setNoResults={setNoResults}
-        />
-        <TopRatedButton
-          restaurants={filteredRestaurants}
-          setFilteredRestaurants={setFilteredRestaurants}
-          setDisplayRestaurants={setDisplayRestaurants}
-        />
-      </div>
+      <div className='filter-area'>
+        <SearchBar
+        searchText={searchText}
+        setSearchText={setSearchText}
+        searchRestaurant={searchRestaurant}
+        setSearchRestaurant={setSearchRestaurant}
+        filteredRestaurants={filteredRestaurants}
+        setDisplayRestaurants={setDisplayRestaurants}
+        setNoResults={setNoResults}
+      />
+      <TopRatedButton
+        restaurants={filteredRestaurants}
+        setFilteredRestaurants={setFilteredRestaurants}
+        setDisplayRestaurants={setDisplayRestaurants}
+      />
+    </div>
 
-      {noResults ? (
-        <NoResults /> 
-      ) : (
-        <div className="res-container">
-          {displayRestaurants.map((res) => (
-            <Restaurant
-              key={res.id}
-              name={res.name}
-              rating={res.rating}
-              price={res.price / 100}
-              image={res.image}
-              deliveryTime={res.avgDeliveryTime}
-            />
-          ))}
-        </div>
-      )}
+    {noResults ? (
+      <NoResults /> 
+    ) : (
+      <div className="res-container">
+        {displayRestaurants.map((res) => (
+          <Restaurant
+            key={res.id}
+            name={res.name}
+            rating={res.rating}
+            price={res.price / 100}
+            image={res.image}
+            deliveryTime={res.avgDeliveryTime}
+          />
+        ))}
+      </div>
+    )}
     </>
   );
 };
 
-export default App;
+export default Body;
