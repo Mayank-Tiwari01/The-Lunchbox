@@ -16,6 +16,7 @@ const Header = () => {
             <li>Home</li>
             <li>Pure Veg food options</li>
             <li>Non Veg food options</li>
+            <li>About Us</li>
             <li>Contact Us</li>
             <li>Cart</li>
           </ul>
