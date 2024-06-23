@@ -8,6 +8,7 @@ import Error from './src/components/Error';
 import Body from './src/components/Body';
 import NonVeg from './src/components/NonVeg';
 import PureVeg from './src/components/PureVeg';
+import ResMenu from './src/components/ResMenu';
 const reactRoute = createBrowserRouter([
   {
     path : '/',
@@ -32,6 +33,10 @@ const reactRoute = createBrowserRouter([
       {
         path : '/PureVeg',
         element : <PureVeg/>
+      },
+      {
+        path : '/Restaurants/:resId',
+        element : <ResMenu/>
       }
     ],
     errorElement : <Error/>

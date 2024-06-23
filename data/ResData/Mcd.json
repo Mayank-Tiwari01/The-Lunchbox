@@ -1,0 +1,133 @@
+[
+    {
+        "id": 1,
+        "name": "McDonald's",
+        "rating": 4.2,
+        "costForTwo": 450,
+        "avgTimeToDeliver": 30,
+        "deliveryFees": 20,
+        "distance": 2.5,
+        "deals": [
+            {
+                "deal": "Get 20% off",
+                "code": "GET20"
+            },
+            {
+                "deal": "Free delivery on orders above $50",
+                "code": "FREEDEL50"
+            }
+        ],
+        "menu": [
+            {
+                "id": 101,
+                "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/ni4jj1hlo4zt7i3ioaow",
+                "dishname": "McAloo Tikki Burger",
+                "veg": 1,
+                "price": 50,
+                "rating": 4.5,
+                "numRating": 150,
+                "bestSeller": 1,
+                "dishInfo": "A surprise that will leave you wide-eyed. A scrumptious potato patty topped with a delectable Italian herb sauce and shredded onions placed between perfectly toasted buns."
+            },
+            {
+                "id": 102,
+                "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/dd6r9r27jflrcrjab4pq",
+                "dishname": "McChicken",
+                "veg": 0,
+                "price": 75,
+                "rating": 4.0,
+                "numRating": 200,
+                "bestSeller": 1,
+                "dishInfo": "Juicy chicken patty with crisp lettuce and creamy mayo in a perfectly toasted bun."
+            },
+            {
+                "id": 103,
+                "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/aekaxqqfayw0bt7luwhv",
+                "dishname": "McSpicy® Chicken",
+                "veg": 0,
+                "price": 90,
+                "rating": 4.3,
+                "numRating": 180,
+                "bestSeller": 1,
+                "dishInfo": "Spicy chicken patty with a crunchy coating, topped with fresh lettuce and creamy sauce."
+            },
+            {
+                "id": 104,
+                "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/oswfs7fqndtob54z7vib",
+                "dishname": "Big Spicy Paneer Wrap",
+                "veg": 1,
+                "price": 100,
+                "rating": 4.2,
+                "numRating": 160,
+                "bestSeller": 0,
+                "dishInfo": "Spicy paneer wrapped in a soft tortilla with fresh veggies and a tangy sauce."
+            },
+            {
+                "id": 105,
+                "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/sog9055s6euorawokb1h",
+                "dishname": "McVeggie",
+                "veg": 1,
+                "price": 60,
+                "rating": 4.0,
+                "numRating": 140,
+                "bestSeller": 0,
+                "dishInfo": "Crispy vegetable patty with lettuce, tomatoes, and creamy mayo in a soft bun."
+            },
+            {
+                "id": 106,
+                "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/fmxujouku75sstddk9ic",
+                "dishname": "Big Spicy Chicken Wrap",
+                "veg": 0,
+                "price": 110,
+                "rating": 4.4,
+                "numRating": 170,
+                "bestSeller": 1,
+                "dishInfo": "Juicy and spicy chicken wrapped in a soft tortilla with fresh veggies and a spicy sauce."
+            },
+            {
+                "id": 107,
+                "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/m32bv6bf9zhdhecik2xz",
+                "dishname": "McEgg®",
+                "veg": 0,
+                "price": 45,
+                "rating": 3.8,
+                "numRating": 130,
+                "bestSeller": 0,
+                "dishInfo": "Soft and fluffy egg patty with fresh veggies in a perfectly toasted bun."
+            },
+            {
+                "id": 108,
+                "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/elssdjqcsdrwjmwa4yaf",
+                "dishname": "McSpicy® Paneer",
+                "veg": 1,
+                "price": 85,
+                "rating": 4.1,
+                "numRating": 145,
+                "bestSeller": 1,
+                "dishInfo": "Spicy paneer patty with a crunchy coating, fresh lettuce, and creamy sauce."
+            },
+            {
+                "id": 109,
+                "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/kx593cavjojl7ykda9uv",
+                "dishname": "Veg Maharaja Mac",
+                "veg": 1,
+                "price": 120,
+                "rating": 4.6,
+                "numRating": 200,
+                "bestSeller": 1,
+                "dishInfo": "Double patties with fresh veggies, creamy sauce, and melted cheese in a soft bun."
+            },
+            {
+                "id": 110,
+                "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/2bebb02ac62ec20ed8fe299e7dd971a6",
+                "dishname": "Aloo-Wrap",
+                "veg": 1,
+                "price": 55,
+                "rating": 4.0,
+                "numRating": 135,
+                "bestSeller": 0,
+                "dishInfo": "Spicy potato filling wrapped in a soft tortilla with fresh veggies and a tangy sauce."
+            }
+        ]
+    }
+]
