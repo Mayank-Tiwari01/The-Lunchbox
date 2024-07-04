@@ -48,6 +48,8 @@ body {
   color: #333;
   transition: color 0.3s ease, transform 0.3s ease;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .right-options-ul li:hover {
@@ -71,6 +73,10 @@ body {
   left: 0;
 }
 
+.icon {
+  margin-right: 8px;
+}
+
 @media (max-width: 768px) {
   .nav-bar {
     flex-direction: column;
@@ -92,14 +98,13 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: inherit; /* This will make the link color match the parent text color */
+  color: inherit;
 }
 
 .nav-link:hover {
   text-decoration: none;
 }
 
-/*to remove the blue color from visited links as well */
 .nav-link:visited {
   color: inherit;
 }
