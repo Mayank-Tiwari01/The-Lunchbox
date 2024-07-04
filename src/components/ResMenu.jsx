@@ -1,41 +1,37 @@
 import React, { useEffect, useState } from 'react';
 
 function ResMenu() {
-  const [data, setData] = useState(null);
+  const [resData, setResData] = useState(null);
 
   async function fetchData() {
-    let response = await fetch('https://mocki.io/v1/343fc5d8-0e48-41d5-9fe9-92c39686418a');
-    response = await response.json();
-    setData(response[0]); // Assuming the JSON is an array with a single object
+    try {
+      let response = await fetch('https://thingproxy-760k.onrender.com/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8947446&lng=75.8301169&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+      response = await response.json();
+      setResData(response);
+      console.log("Here is the fetched data: ", response?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   }
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, []); // We have used an empty dependency array to ensure it runs only once after the initial render.
 
   return (
     <>
-      {data && (
-        <>
-          <div>{data.name}</div>
-          <div>{data.costForTwo}</div>
-          <div>{data.rating}</div>
-          <div>
-            {data.menu.map((item) => (
-              <div key={item.id}>
-                <img src={item.img} alt={item.dishname} width="100" />
-                <div>{item.dishname}</div>
-                <div>{item.price}</div>
-                <div>{item.veg ? 'Vegetarian' : 'Non-Vegetarian'}</div>
-                <div>{item.rating}</div>
-                <div>{item.numRating} ratings</div>
-                <div>{item.bestSeller ? 'Best Seller' : ''}</div>
-                <div>{item.dishInfo}</div>
-              </div>
-            ))}
-          </div>
-        </>
-      )}
+      <h1>Res Comp:</h1>
+      {resData && 
+        <div>
+          {
+            resData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants.map((restaurant, index) => (
+              <p key={index}>
+                {restaurant.info.name} - {restaurant.info.locality} - {restaurant.info.areaName} - {restaurant.info.avgRatingString} - {restaurant.info.costForTwo}
+              </p>
+            ))
+          }
+        </div>     
+      }
     </>
   );
 }

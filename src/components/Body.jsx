@@ -1,85 +1,69 @@
 import React, { useState, useEffect } from 'react';
-import Header from './Header';
+import ShimmerUi from './ShimmerUi';
 import Restaurant from './Restaurant';
 import TopRatedButton from './TopRatedButton';
-import ShimmerUi from './ShimmerUi'; 
+import SearchBarNew from './SearchBar';
+import NoResults from './NoResult'
 import localRestaurants from '../../data/data.json';
-import NoResults from './NoResult'; 
-import SearchBar from './SearchBar';
-import '../styles/filterArea.css'
 const Body = () => {
-  //used for filtering top restaurant.
-  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
-  //used to store and update the searched restaurant.
-  const [searchText, setSearchText] = useState("");
-  //used to filter restaurant based on searched text.
-  const [searchRestaurant, setSearchRestaurant] = useState([]);
-  //used to display restaurants based on current filter or search.
-  const [displayRestaurants, setDisplayRestaurants] = useState([]);
-  //used to show no results message.
-  const [noResults, setNoResults] = useState(false);
 
-  async function fetchData() {
+  //to keep track of the original data, this never get's modified.
+  const [resData, setResData] = useState([]);
+  //modifies/shows data based on the giving condition.
+  const [restaurants, setRestaurants] = useState([]);
+  //shows the text on screen to the user.
+  const [showText, setShowText] = useState("");
+
+  const fetchLiveData = async () => {
     try {
-      const response = await fetch("https://mocki.io/v1/4f61ea24-8625-496b-9518-57ae2a21def9");
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-
-      const json = await response.json();
-      setFilteredRestaurants(json);
-      setSearchRestaurant(json);
-      setDisplayRestaurants(json);
-      setNoResults(false); 
-    } catch (error) {
+      let response = await fetch('https://thingproxy-760k.onrender.com/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8947446&lng=75.8301169&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+      let json = await response.json();
+      
+      let res = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      setResData(res);
+      setRestaurants(res);
+      console.log(res);
+    } catch {
       console.error("Error occurred while fetching data from remote API, falling back to local data", error);
-      setFilteredRestaurants(localRestaurants);
-      setSearchRestaurant(localRestaurants);
-      setDisplayRestaurants(localRestaurants);
-      setNoResults(false); 
+      setResData(localRestaurants);
+      setRestaurants(localRestaurants);
+      console.error('error fetching the data :(');
     }
-  }
+  };
 
   useEffect(() => {
-    fetchData();
+    fetchLiveData();
   }, []);
 
-  return (filteredRestaurants.length === 0) ? <ShimmerUi /> : (
+  if (resData.length === 0) return <ShimmerUi />;
+
+  return (
     <>
       <div className='filter-area'>
-        <SearchBar
-        searchText={searchText}
-        setSearchText={setSearchText}
-        searchRestaurant={searchRestaurant}
-        setSearchRestaurant={setSearchRestaurant}
-        filteredRestaurants={filteredRestaurants}
-        setDisplayRestaurants={setDisplayRestaurants}
-        setNoResults={setNoResults}
-      />
-      <TopRatedButton
-        restaurants={filteredRestaurants}
-        setFilteredRestaurants={setFilteredRestaurants}
-        setDisplayRestaurants={setDisplayRestaurants}
-      />
-    </div>
-
-    {noResults ? (
-      <NoResults /> 
-    ) : (
+        <SearchBarNew
+          showText={showText}
+          setShowText={setShowText}
+          resData={resData}
+          setRestaurants={setRestaurants}
+        />
+        <TopRatedButton
+          resData={resData}
+          setRestaurants={setRestaurants}
+        />
+      </div>
+      {restaurants.length === 0? <NoResults /> :
       <div className="res-container">
-        {displayRestaurants.map((res) => (
+        {restaurants.map((res) => (
           <Restaurant
-            key={res.id}
-            name={res.name}
-            rating={res.rating}
-            price={res.price / 100}
-            image={res.image}
-            deliveryTime={res.avgDeliveryTime}
+            key={res?.info?.id}
+            name={res?.info?.name}
+            rating={res?.info?.avgRatingString}
+            price={res?.info?.costForTwo}
+            image={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${res?.info?.cloudinaryImageId}`}
+            deliveryTime={res?.info?.sla?.deliveryTime}
           />
         ))}
-      </div>
-    )}
+      </div>}
     </>
   );
 };

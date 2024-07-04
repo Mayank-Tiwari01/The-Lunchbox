@@ -1,18 +1,20 @@
 import React from 'react';
-import "../styles/topRated.css";
+import style from '../styles/topRated.css'
+function TopRatedButton({ resData, setRestaurants }) {
 
-const TopRatedButton = ({ restaurants, setFilteredRestaurants, setDisplayRestaurants }) => {
   const handleClick = () => {
-    const filteredList = restaurants.filter((item) => item.rating > 4.5);
-    setFilteredRestaurants(filteredList);
-    setDisplayRestaurants(filteredList);
+    let filteredRes = resData.filter((res) => res?.info?.avgRating > 4);
+    setRestaurants(filteredRes);
+    console.log(filteredRes);
   };
 
   return (
-    <button className="top-rated-button" onClick={handleClick}>
-      See Top Rated Restaurants✨
-    </button>
+    <>
+      <button className="top-rated-button" onClick={handleClick}>
+        See Top Rated Restaurants✨
+      </button>
+    </>
   );
-};
+}
 
 export default TopRatedButton;

@@ -1,34 +1,31 @@
-import React from 'react';
-
-const SearchBar = ({ searchText, setSearchText, searchRestaurant, setSearchRestaurant, filteredRestaurants, setDisplayRestaurants, setNoResults }) => {
-
+import React from 'react'
+import style from '../styles/filterArea.css'
+const SearchBar = ({showText, setShowText, resData, setRestaurants}) => {
   const handleChange = (e) => {
-    setSearchText(e.target.value);
+    setShowText(e.target.value)
   }
 
   const handleClick = () => {
-    let searchedRes = filteredRestaurants.filter((res) => 
-      res.name.toLowerCase().includes(searchText.toLowerCase())
-    );
-    setSearchRestaurant(searchedRes);
-    setDisplayRestaurants(searchedRes);
-    setNoResults(searchedRes.length === 0); 
+    let temp = resData.filter((res) => {
+      return res?.info?.name.toLowerCase().includes(showText.toLowerCase());
+    })
+    setRestaurants(temp);
   }
-
   return (
-    <div>
-      <input 
+    <>
+      <input
         className="input-box" 
         type="text" 
-        value={searchText} 
-        onChange={handleChange} 
+        value={showText}
+        onChange={handleChange}
         placeholder="Search for your Fav Restaurants here!"
+        onKeyDown={handleClick}
       />
       <button className="search-button" onClick={handleClick}>
         Search
       </button>
-    </div>
-  );
+    </>
+  )
 }
 
 export default SearchBar;
