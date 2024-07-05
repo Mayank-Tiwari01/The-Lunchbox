@@ -23,7 +23,7 @@ const Body = () => {
       setResData(res);
       setRestaurants(res);
       console.log(res);
-    } catch {
+    } catch(error) {
       console.error("Error occurred while fetching data from remote API, falling back to local data", error);
       setResData(localRestaurants);
       setRestaurants(localRestaurants);

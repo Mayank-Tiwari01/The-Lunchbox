@@ -3,7 +3,7 @@ import style from '../styles/topRated.css'
 function TopRatedButton({ resData, setRestaurants }) {
 
   const handleClick = () => {
-    let filteredRes = resData.filter((res) => res?.info?.avgRating > 4);
+    let filteredRes = resData.filter((res) => res?.info?.avgRating > 4.3);
     setRestaurants(filteredRes);
     console.log(filteredRes);
   };
