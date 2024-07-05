@@ -23,15 +23,15 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: box-shadow 0.5s ease;
-  transition: background-color 0.5s ease;
+  transition: box-shadow 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
+
 .res-card:hover {
-  background-color:#DDDDDD;
+  background-color: #DDDDDD;
 }
-/* .res-card:hover .res-image {
-  transform: scale(1.05);
-} */
 
 .res-image {
   width: 100%;
@@ -39,12 +39,15 @@ body {
   object-fit: cover;
   transition: transform 0.5s ease;
 }
+
 .res-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.10);
 }
+
 .res-items {
   padding: 20px;
   text-align: center;
+  flex-grow: 1;
 }
 
 h1 {
@@ -104,4 +107,8 @@ p {
 .delivery-img:hover {
   transform: scale(1.1);
   transition: transform 0.2s ease;
+}
+
+.res-menu-link {
+  text-decoration: none;
 }

@@ -5,6 +5,7 @@ import TopRatedButton from './TopRatedButton';
 import SearchBarNew from './SearchBar';
 import NoResults from './NoResult'
 import localRestaurants from '../../data/data.json';
+import { Link } from 'react-router-dom';
 const Body = () => {
 
   //to keep track of the original data, this never get's modified.
@@ -16,6 +17,9 @@ const Body = () => {
 
   const fetchLiveData = async () => {
     try {
+
+      // let response = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+
       let response = await fetch('https://thingproxy-760k.onrender.com/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8947446&lng=75.8301169&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
       let json = await response.json();
       
@@ -54,14 +58,15 @@ const Body = () => {
       {restaurants.length === 0? <NoResults /> :
       <div className="res-container">
         {restaurants.map((res) => (
-          <Restaurant
-            key={res?.info?.id}
-            name={res?.info?.name}
-            rating={res?.info?.avgRatingString}
-            price={res?.info?.costForTwo}
-            image={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${res?.info?.cloudinaryImageId}`}
-            deliveryTime={res?.info?.sla?.deliveryTime}
-          />
+          <Link key={res?.info?.id} to={"/Restaurants/" + res?.info?.id} className="res-menu-link">
+            <Restaurant
+              name={res?.info?.name}
+              rating={res?.info?.avgRatingString}
+              price={res?.info?.costForTwo}
+              image={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${res?.info?.cloudinaryImageId}`}
+              deliveryTime={res?.info?.sla?.deliveryTime}
+            />
+          </Link>
         ))}
       </div>}
     </>
