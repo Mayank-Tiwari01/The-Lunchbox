@@ -4,8 +4,10 @@ import Restaurant from './Restaurant';
 import TopRatedButton from './TopRatedButton';
 import SearchBarNew from './SearchBar';
 import NoResults from './NoResult'
-import localRestaurants from '../../data/data.json';
+import useInternetStatus from '../utils/useInternetStatus';
 import { Link } from 'react-router-dom';
+import NoInternetError from './NoInternetError';
+
 const Body = () => {
 
   //to keep track of the original data, this never get's modified.
@@ -33,9 +35,14 @@ const Body = () => {
     }
   };
 
+  let status = useInternetStatus();
+
   useEffect(() => {
     fetchLiveData();
   }, []);
+
+  
+  if (status === false) return <NoInternetError/>
 
   if (resData.length === 0) return <ShimmerUi />;
 
