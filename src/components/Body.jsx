@@ -21,6 +21,7 @@ const Body = () => {
       // let response = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
 
       let response = await fetch('https://thingproxy-760k.onrender.com/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8947446&lng=75.8301169&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+
       let json = await response.json();
       
       let res = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
@@ -28,10 +29,7 @@ const Body = () => {
       setRestaurants(res);
       console.log(res);
     } catch(error) {
-      console.error("Error occurred while fetching data from remote API, falling back to local data", error);
-      setResData(localRestaurants);
-      setRestaurants(localRestaurants);
-      console.error('error fetching the data :(');
+      console.error('error fetching the data :(' + error);
     }
   };
 
